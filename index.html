@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creamos páginas web personalizadas para bares, restaurantes, cafeterías y cualquier otro modelo de negocio. 
+    Con un alojamiento confiable y diseño único. ¡Consigue una web hoy mismo!">
+    <meta name="keywords" content="TuWeb, crecer tu negocio, medio digital, marketing digital, desarrollo web, crear página web, cuba">
+    <title>TuWeb</title>
+    <link rel="icon" href="img/icons/favicon.ico" type="image/x-icon"> <!--Favicon-->
+    <link rel="stylesheet" type="text/css" href="css/mobile_first.css"> <!--CSS-->
+    <script src="js/btn_events.js"></script> <!--JS-->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            function loadResponsive() {
+                const existingLinks = document.querySelectorAll('link[rel="stylesheet"][data-responsive]');
+                existingLinks.forEach(link => link.parentNode.removeChild(link));
+
+                if (window.innerWidth > 440 && window.innerWidth <= 1080) {
+                    const link = document.createElement('link');
+                    link.rel = 'stylesheet';
+                    link.type = 'text/css';
+                    link.href = 'css/v_tablet.css';
+                    link.setAttribute('data-responsive', 'true');
+                    document.getElementsByTagName('head')[0].appendChild(link);
+                }
+                else if (window.innerWidth > 1080) {
+                    const link = document.createElement('link');
+                    link.rel = 'stylesheet';
+                    link.type = 'text/css';
+                    link.href = 'css/v_pc.css';
+                    link.setAttribute('data-responsive', 'true');
+                    document.getElementsByTagName('head')[0].appendChild(link);
+                }
+            }
+    
+            // BLURRY
+            const background = document.querySelector('.port_mobile');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 90) background.classList.add('blur')
+                else background.classList.remove('blur');
+            });
+    
+            window.onload = loadResponsive;
+            window.onresize = loadResponsive;
+        });
+    </script>    
+</head>
+<body>
+    <!--NAV------------------------------------------------------------------------------------------>
+    <header id="header">
+        <nav class="navbar">
+            <div class="logo">
+                <button class="btnLogo">
+                    <h1>
+                        <span class="letters white">TU</span>
+                        <span class="letters black">WEB</span>
+                    </h1>                
+                </button>
+            </div>
+            <button class="know_us">Sobre Nosotros</button>
+        </nav>
+    </header>
+
+    <main id="main">
+        <!--SECTION: PORTADA------------------------------------------------------------------------->
+        <section class="face">
+            <!--MOBILE-->
+            <div class="port_mobile">
+                <h2 class="text_1">Crea una <br>página web <br>para tu <br><span>negocio</span></h2>
+                <h2 class="text_2">Empieza <br><span>YA!</span></h2>
+                <div class="img_container img_1">
+                    <img src="img/cell.webp" alt="Marketing Digital">
+                </div>
+                <div class="img_container img_2">
+                    <img src="img/laptop.webp" alt="Páginas Web">
+                </div>
+            </div>
+            <!--PC-->
+            <div class="port_pc">
+                <!--?-TODO-->
+            </div>
+            <!--CONTACT BUTTON-->
+            <button class="contact" id="contact_btn">Contáctanos</button>
+        </section>
+
+        <!--SECTION: INFORMACIÓN--------------------------------------------------------------------->
+        <section class="information" id="information">
+            <h2 class="presentation">Ofrecemos servicios dedicados al Desarrollo Web y Marketing.</h2>
+            <!--FIRST TEXT-->
+            <div class="info-box">
+                <img src="img/icons/bolt.svg" alt="thunder-icon">
+                <div class="info-text">
+                    <h3>Sin Límites</h3>
+                    <p>El contenido es adaptable a cualquier modelo de negocio. Mientras que su publicidad podrá apoyarse en boca de nuestro servicio.
+                        ¡Si puede hablarlo podemos diseñarlo!</p>
+                </div>
+            </div>
+            <!--SECOND TEXT-->
+            <div class="info-box">
+                <img src="img/icons/heart.svg" alt="heart-icon">
+                <div class="info-text">
+                    <h3>Completo Compromiso</h3>
+                    <p>Nos encargaremos de mantener su sitio web activo y actualizado al 100% las 24 horas del día.
+                        Para una mejor experiencia y disfrute de sus consumidores.</p>
+                </div>
+            </div>
+            <!--THIRD TEXT-->
+            <div class="info-box">
+                <img src="img/icons/graph.svg" alt="graph-icon">
+                <div class="info-text">
+                    <h3>¿Por qué Elegirnos?</h3>
+                    <p>Ofrecemos un servicio único y sólido, que cuenta con un lugar asegurado en la red nacional e internacional para su sitio web.
+                        Gracias a esto es rápido y sostenible.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!--FOOTER--------------------------------------------------------------------------------------->
+    <footer id="footer">
+        <div class="link_container">
+            <!--WHATSAPP-->
+            <div class="contact_us">
+                <h3>Escríbenos</h3>
+                <div class="num_container">
+                    <button class="btn_call" id="wpp_ernesto" aria-label="escribir al administrador">
+                        <img src="img/icons/whatsapp.svg" alt="whatsapp_icon">
+                    </button>
+                    <p><a href="https://wa.me/+5352427622?text=Hola!">+53 52427622</a></p>                        
+                </div>
+                <div class="num_container">
+                    <button class="btn_call" id="wpp_diego" aria-label="escribir al administrador">
+                        <img src="img/icons/whatsapp.svg" alt="whatsapp_icon">
+                    </button>
+                    <p><a href="https://wa.me/+5356938821?text=Hola!">+53 56938821</a></p>
+                </div>
+            </div>
+            <!--LLAMADA-->
+            <div class="contact_us">
+                <h3>Llámanos</h3>
+                <div class="num_container">
+                    <button class="btn_call" id="call_ernesto" aria-label="llamar al administrador">
+                        <img src="img/icons/cell.svg" alt="cellphone_icon">
+                    </button>
+                    <p><a href="tel:+5352427622">+53 52427622</a></p>
+                </div>
+                <div class="num_container">
+                    <button class="btn_call" id="call_diego" aria-label="llamar al administrador">
+                        <img src="img/icons/cell.svg" alt="cellphone_icon">
+                    </button>
+                    <p><a href="tel:+5356938821">+53 56938821</a></p>                        
+                </div>
+            </div>
+            <!--REDES-->      
+            <div class="contact_us">
+                <h3>Síguenos</h3>
+                <div class="num_container">
+                    <button class="btn_call" id="btn_ig" aria-label="Instagram de TuWeb">
+                        <img src="img/icons/instagram.svg" alt="instagram_icon">
+                    </button>
+                    <p><a href="https://www.instagram.com/tuweb.cu" target="_blank">Instagram</a></p>
+                </div>
+                <div class="num_container">
+                    <button class="btn_call" id="btn_tg" aria-label="Telegram de TuWeb">
+                        <img src="img/icons/telegram.svg" alt="telegram_icon">
+                    </button>
+                    <p><a href="https://t.me/tuweb_cu" target="_blank">Telegram</a></p>
+                </div>
+            </div>                          
+        </div>
+        <!--COPYRIGHT-->
+        <p class="copyright">&copy; Creado por TuWeb. Todos los derechos reservados.
+            <br><br>Cuba.
+        </p>
+    </footer>
+</body>
+</html>

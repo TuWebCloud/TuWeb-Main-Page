@@ -1,0 +1,38 @@
+@media screen and (min-width: 1080px) {
+    .navbar {
+        padding: 10px 80px;
+        box-shadow: none;
+        border: none;
+    }
+    .logo button h1 span {
+        font-size: 28px;
+    }
+    .logo button:hover {
+        cursor: pointer;
+    }
+    .know_us {
+        outline: none;
+        color: #000;
+        font-size: 25px;
+        transition: all .1s ease;
+    }
+    .know_us:hover {
+        cursor: pointer;
+        color: #78009a;
+    }
+    
+    .port_pc {
+        display: block;
+    }
+    .port_mobile {
+        display: none;
+    }
+    .contact {
+        display: none;
+    }
+
+    /* INFO----------------------------------------------------- */
+    .presentation {
+        font-size: 26px;
+    }
+}
