@@ -175,13 +175,11 @@ body {
 .info-box {
     display: flex;
     flex-direction: row;
+    position: relative;
     padding: 20px 40px;
 }
 .info-box img {
     padding: 0 10px 0 0;
-}
-.info-box {
-    position: relative; 
 }
 .info-text {
     padding: 10px;
