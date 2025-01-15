@@ -249,7 +249,7 @@ body {
 }
 .num_container p {
     display: inline;
-    padding-left: 6px;
+    padding-left: 4px;
     vertical-align: middle;
 }
 .num_container p a {   
