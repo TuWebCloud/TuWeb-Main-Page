@@ -205,6 +205,9 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
+.link_container_pc {
+    display: none;
+}
 
 .contact_us {
     display: flex;
@@ -242,6 +245,7 @@ body {
 .num_container {
     padding: 4px;
     margin: 4px auto 4px 12.6875px;
+    color: #ddd; 
 }
 .num_container p {
     display: inline;
@@ -249,8 +253,8 @@ body {
     vertical-align: middle;
 }
 .num_container p a {   
-    color: #ddd; 
     text-decoration: none;
+    color: #ddd; 
     font-size: 18px;
     font-weight: 100;
 }
