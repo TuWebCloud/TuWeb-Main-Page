@@ -24,11 +24,41 @@
     /* PORTADA------------------------------------------------- */
     .port_pc {
         display: grid;
-        height: 100%;
-        grid-template-columns: 450px 1fr;
+        grid-template-columns: 500px 1fr;
     }
     .port_mobile {
         display: none;
+    }
+    .contact {
+        display: none;
+    }
+
+    .text_section {
+        display: flex;
+        flex-direction: column;
+        padding: 0 70px;
+        margin-top: 160px;
+    }
+
+    .text {        
+        font-size: 60px;
+    }
+    .text span {
+        color: #78009a;
+    }
+
+    .text_section small {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    .text_section button {
+        background: linear-gradient(to right, #78009a, #a500d3);
+        color: #ddd;
+        border: none;
+        height: 70px;
+        border-radius: 25px;
+        border-bottom: 4px solid #500066;
+        font-size: 30px;
     }
 
     /* INFO----------------------------------------------------- */

@@ -159,7 +159,6 @@ body {
 .information {
     position: relative;
     width: 100%;
-    margin-top: 450px;
     background-color: #ddd;
     scroll-margin-top: 54px;
 }
