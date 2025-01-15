@@ -21,13 +21,13 @@
         color: #78009a;
     }
     
+    /* PORTADA------------------------------------------------- */
     .port_pc {
-        display: block;
+        display: grid;
+        height: 100%;
+        grid-template-columns: 450px 1fr;
     }
     .port_mobile {
-        display: none;
-    }
-    .contact {
         display: none;
     }
 
