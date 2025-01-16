@@ -24,7 +24,8 @@
     /* PORTADA------------------------------------------------- */
     .port_pc {
         display: grid;
-        grid-template-columns: 500px 1fr;
+        grid-template-columns: 550px 1fr;
+        height: 100vh;
     }
     .port_mobile {
         display: none;
@@ -36,29 +37,28 @@
     .text_section {
         display: flex;
         flex-direction: column;
-        padding: 0 70px;
+        padding: 0 75px;
         margin-top: 160px;
     }
 
     .text {        
-        font-size: 60px;
+        font-size: 70px;
     }
     .text span {
         color: #78009a;
     }
 
     .text_section small {
-        margin-top: 20px;
-        font-size: 20px;
+        margin: 20px 0 0 15px;
+        font-size: 25px;
     }
     .text_section button {
         background: linear-gradient(to right, #78009a, #a500d3);
         color: #ddd;
         border: none;
-        height: 70px;
+        height: 80px;
         border-radius: 25px;
-        border-bottom: 4px solid #500066;
-        font-size: 30px;
+        font-size: 35px;
     }
 
     /* INFO----------------------------------------------------- */
