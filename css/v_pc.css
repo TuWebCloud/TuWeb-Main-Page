@@ -67,7 +67,7 @@
         transform: translateY(-8px);
         background: linear-gradient(to right, #ae01de, #c554e5);
         border-bottom: 2px solid #78009a;
-        box-shadow: 0 8px 6px rgba(15, 0, 19, .6);
+        box-shadow: 8px 8px 6px rgba(15, 0, 19, .6);
     }
 
     .img_section {
