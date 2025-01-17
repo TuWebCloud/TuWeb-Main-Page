@@ -71,6 +71,7 @@ body {
 
 /* PORTADA----------------------------------------------------------------------------- */
 .port_mobile {
+    display: flex;
     width: 100%;
 }
 .port_pc {
@@ -159,6 +160,7 @@ body {
 .information {
     position: relative;
     width: 100%;
+    margin-top: 460px;
     background-color: #ddd;
     scroll-margin-top: 54px;
 }
