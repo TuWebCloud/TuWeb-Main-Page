@@ -11,38 +11,37 @@
     <link rel="stylesheet" type="text/css" href="css/mobile_first.css"> <!--CSS-->
     <script src="js/btn_events.js"></script> <!--JS-->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            function loadResponsive() {
-                const existingLinks = document.querySelectorAll('link[rel="stylesheet"][data-responsive]');
-                existingLinks.forEach(link => link.parentNode.removeChild(link));
+        function loadResponsive() {
+            const existingLinks = document.querySelectorAll('link[rel="stylesheet"][data-responsive]');
+            existingLinks.forEach(link => link.parentNode.removeChild(link));
 
-                if (window.innerWidth > 440 && window.innerWidth <= 1080) {
-                    const link = document.createElement('link');
-                    link.rel = 'stylesheet';
-                    link.type = 'text/css';
-                    link.href = 'css/v_tablet.css';
-                    link.setAttribute('data-responsive', 'true');
-                    document.getElementsByTagName('head')[0].appendChild(link);
-                }
-                else if (window.innerWidth > 1080) {
-                    const link = document.createElement('link');
-                    link.rel = 'stylesheet';
-                    link.type = 'text/css';
-                    link.href = 'css/v_pc.css';
-                    link.setAttribute('data-responsive', 'true');
-                    document.getElementsByTagName('head')[0].appendChild(link);
-                }
+            if (window.innerWidth > 440 && window.innerWidth <= 1080) {
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'css/v_tablet.css';
+                link.setAttribute('data-responsive', 'true');
+                document.getElementsByTagName('head')[0].appendChild(link);
             }
-    
+            else if (window.innerWidth > 1080) {
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'css/v_pc.css';
+                link.setAttribute('data-responsive', 'true');
+                document.getElementsByTagName('head')[0].appendChild(link);
+            }
+        }
+        window.onload = loadResponsive;
+        window.onresize = loadResponsive;
+
+        document.addEventListener('DOMContentLoaded', () => {            
             // BLURRY
             const background = document.querySelector('.port_mobile');
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 90) background.classList.add('blur')
                 else background.classList.remove('blur');
             });
-    
-            window.onload = loadResponsive;
-            window.onresize = loadResponsive;
         });
     </script>    
 </head>
