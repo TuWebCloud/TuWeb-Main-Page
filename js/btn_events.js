@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     btnContact2.addEventListener('click', () => {
         window.location.href = '#footer'
-        btnContact.classList.add('temp_style_contact')
+        btnContact2.classList.add('temp_style_contact')
         setTimeout(() => {
-            btnContact.classList.remove('temp_style_contact')
+            btnContact2.classList.remove('temp_style_contact')
         }, 800)
     })
     btnKnowus.addEventListener('click', () => {

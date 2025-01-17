@@ -1,6 +1,6 @@
 @media screen and (min-width: 1080px) {
     .navbar {
-        padding: 10px 80px;
+        padding: 10px 100px;
         box-shadow: none;
         border: none;
     }
@@ -11,6 +11,7 @@
         cursor: pointer;
     }
     .know_us {
+        display: none;
         outline: none;
         color: #000;
         font-size: 25px;
@@ -67,7 +68,7 @@
         transform: translateY(-8px);
         background: linear-gradient(to right, #ae01de, #c554e5);
         border-bottom: 2px solid #78009a;
-        box-shadow: 8px 8px 6px rgba(15, 0, 19, .6);
+        box-shadow: 10px 10px 10px rgba(15, 0, 19, .6);
     }
 
     .img_section {
