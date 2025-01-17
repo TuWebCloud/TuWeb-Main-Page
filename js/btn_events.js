@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const btnLogo = document.querySelector('.btnLogo')
     const btnContact = document.querySelector('.contact')
+    const btnContact2 = document.querySelector('.contact_2')
     const btnKnowus = document.querySelector('.know_us')
     const callErnesto = document.getElementById('call_ernesto')
     const callDiego = document.getElementById('call_diego')
@@ -16,6 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Botones para moverse x la página
     btnContact.addEventListener('click', () => {
+        window.location.href = '#footer'
+        btnContact.classList.add('temp_style_contact')
+        setTimeout(() => {
+            btnContact.classList.remove('temp_style_contact')
+        }, 800)
+    })
+    btnContact2.addEventListener('click', () => {
         window.location.href = '#footer'
         btnContact.classList.add('temp_style_contact')
         setTimeout(() => {

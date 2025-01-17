@@ -24,7 +24,7 @@
     /* PORTADA------------------------------------------------- */
     .port_pc {
         display: grid;
-        grid-template-columns: 550px 1fr;
+        grid-template-columns: 630px 1fr;
         height: 100vh;
     }
     .port_mobile {
@@ -37,7 +37,7 @@
     .text_section {
         display: flex;
         flex-direction: column;
-        padding: 0 75px;
+        padding-left: 100px;
         margin-top: 160px;
     }
 
@@ -57,8 +57,104 @@
         color: #ddd;
         border: none;
         height: 80px;
+        width: 400px;
         border-radius: 25px;
         font-size: 35px;
+        transition: all .2s ease;
+    }
+    .text_section button:hover {
+        cursor: pointer;
+        transform: translateY(-8px);
+        background: linear-gradient(to right, #ae01de, #c554e5);
+        border-bottom: 2px solid #78009a;
+        box-shadow: 0 8px 6px rgba(15, 0, 19, .6);
+    }
+
+    .img_section {
+        display: grid;
+        padding: 30px 0;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0 36px;
+    }
+
+    .img {
+        border-radius: 16%;
+        border: 2px solid #ddd;
+        outline: 3px solid #78009a;
+        box-shadow: 12px 12px 10px rgba(15, 0, 19, .5);
+    }
+    .img-1 {
+        height: 330px;
+        width: 330px;        
+        justify-self: end;
+        align-self: end;
+        overflow: hidden;        
+    }
+    .img-1 img {
+        width: 330px;
+        filter: sepia(20%) hue-rotate(-20deg) saturate(150%);
+        transition: all .3s ease;
+    }
+    .img-1 img:hover {
+        transform: scale(1.2);
+    }
+    .img-2 {
+        height: 200px;
+        width: 200px;
+        justify-self: start;
+        align-self: center;
+        overflow: hidden;
+    }
+    .img-2 img {
+        width: 200px;
+        transition: all .3s ease;
+    }
+    .img-2 img:hover {
+        transform: scale(1.2);
+    }
+    .img-3 {
+        height: 200px;
+        width: 200px;
+        justify-self: end;
+        align-self: center;
+        overflow: hidden;
+    }
+    .img-3 img {
+        width: 200px;
+        transition: all .3s ease;
+    }
+    .img-3 img:hover {
+        transform: scale(1.2);
+    }
+    .img-4 {
+        height: 300px;
+        width: 300px;        
+        justify-self: start;
+        align-self: start;
+        overflow: hidden;
+    }
+    .img-4 img {
+        margin-top: -30px;
+        width: 300px;
+        filter: sepia(20%) hue-rotate(-20deg) saturate(150%);
+        transition: all .3s ease;
+    }
+    .img-4 img:hover {
+        transform: scale(1.2);
+    }
+
+    @keyframes upDown {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(10px);
+        }
+    }
+
+    .up-down-animation {
+        animation: upDown 2.5s infinite;
     }
 
     /* INFO----------------------------------------------------- */
