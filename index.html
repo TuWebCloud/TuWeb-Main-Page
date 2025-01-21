@@ -15,13 +15,26 @@
             const existingLinks = document.querySelectorAll('link[rel="stylesheet"][data-responsive]');
             existingLinks.forEach(link => link.parentNode.removeChild(link));
 
-            if (window.innerWidth > 440 && window.innerWidth <= 1080) {
-                const link = document.createElement('link');
-                link.rel = 'stylesheet';
-                link.type = 'text/css';
-                link.href = 'css/v_tablet.css';
-                link.setAttribute('data-responsive', 'true');
-                document.getElementsByTagName('head')[0].appendChild(link);
+            if (window.innerWidth <= 440) {
+                const linkJS = document.createElement('script')
+                linkJS.src = 'js/scroll_events.js'
+                linkJS.setAttribute('data-responsive', 'true')
+                
+                document.getElementsByTagName('head')[0].appendChild(linkJS);
+            }
+            else if (window.innerWidth > 440 && window.innerWidth <= 1080) {
+                const linkCSS = document.createElement('link')
+                linkCSS.rel = 'stylesheet'
+                linkCSS.type = 'text/css'
+                linkCSS.href = 'css/v_tablet.css'
+                linkCSS.setAttribute('data-responsive', 'true')
+
+                const linkJS = document.createElement('script')
+                linkJS.src = 'js/scroll_events.js'
+                linkJS.setAttribute('data-responsive', 'true')
+
+                document.getElementsByTagName('head')[0].appendChild(linkCSS);
+                document.getElementsByTagName('head')[0].appendChild(linkJS);
             }
             else if (window.innerWidth > 1080) {
                 const link = document.createElement('link');
@@ -33,16 +46,7 @@
             }
         }
         window.onload = loadResponsive;
-        window.onresize = loadResponsive;
-
-        document.addEventListener('DOMContentLoaded', () => {            
-            // BLURRY
-            const background = document.querySelector('.port_mobile');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 90) background.classList.add('blur')
-                else background.classList.remove('blur');
-            });
-        });
+        window.onresize = loadResponsive;        
     </script>    
 </head>
 <body>
