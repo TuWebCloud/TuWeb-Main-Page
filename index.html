@@ -36,7 +36,7 @@
                 document.getElementsByTagName('head')[0].appendChild(linkCSS);
                 document.getElementsByTagName('head')[0].appendChild(linkJS);
             }
-            else if (window.innerWidth > 1080) {
+            else {
                 const link = document.createElement('link');
                 link.rel = 'stylesheet';
                 link.type = 'text/css';
@@ -47,7 +47,7 @@
         }
         window.onload = loadResponsive;
         window.onresize = loadResponsive;        
-    </script>    
+    </script>
 </head>
 <body>
     <!--NAV------------------------------------------------------------------------------------------>

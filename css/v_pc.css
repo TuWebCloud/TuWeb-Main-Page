@@ -1,11 +1,11 @@
 @media screen and (min-width: 1080px) {
     .navbar {
-        padding: 4px 100px 0;
+        padding: 10px 100px 0;
         box-shadow: none;
         border: none;
     }
     .logo button h1 span {
-        font-size: 40px;
+        font-size: 35px;
     }
     .logo button:hover {
         cursor: pointer;
